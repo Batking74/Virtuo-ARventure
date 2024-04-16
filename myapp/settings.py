@@ -119,7 +119,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 # If a staticfiles folder was generated when you ran python manage.py collectstatic, it means that Django successfully collected your static files from the directories specified in the STATICFILES_DIRS setting and copied them into the directory specified by STATIC_ROOT.
 STATICFILES_DIRS = (
