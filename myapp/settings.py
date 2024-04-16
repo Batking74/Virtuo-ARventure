@@ -121,6 +121,13 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+# If a staticfiles folder was generated when you ran python manage.py collectstatic, it means that Django successfully collected your static files from the directories specified in the STATICFILES_DIRS setting and copied them into the directory specified by STATIC_ROOT.
+STATICFILES_DIRS = (
+    BASE_DIR / 'static',
+)
+
+STATIC_ROOT = BASE_DIR / 'DeployableStaticAssets'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
