@@ -5,9 +5,12 @@ from django.http import HttpResponse
 # Serving up Index Page View
 def index(request, id):
     # Html goes in as an argument
-    return HttpResponse("<h1>Hello World Naz! %s</h1>" % id)
-
-def posts(request):
-    return render(request, "app/index.html", {})
+    return HttpResponse("<h1>Hello World Naz! I got your parameter which was  %s</h1>" % id)
 
 
+def home(request):
+    return render(request, 'app/index.html')
+
+
+def speechRecognition(request):
+    return render(request, "app/speech_recognition.html", {})

@@ -8,6 +8,7 @@ urlpatterns = [
     # First argument is a route
     # Second argument is the name of the view/page we will go to by calling a function
     # Third argument is the name of the function that we will trigger/serve up when the route is hit.
-    path('api/posts', views.posts),
-    path('<int:id>', views.index, name='index')
+    path('', views.home),
+    path('SpeechRecognition/', views.speechRecognition),
+    path('api/posts/<int:id>', views.index, name='index')
 ]

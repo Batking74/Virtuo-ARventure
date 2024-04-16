@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Speech Recognition">
+    <title>Speech Recognition</title>
+    <style>
+        #container { text-align: center; }
+    </style>
+</head>
+
+<body>
+    <main id="container">
+        <button id="btn">Start</button>
+        <button onclick="test()">Back to Augmented Reality</button>
+    </main>
+    <script>
+        const btn = document.getElementById('btn');
+        const container = document.getElementById('container');
+
+        const recognition = new webkitSpeechRecognition();
+        recognition.continuous = false;
+        recognition.lang = 'en-US';
+        recognition.interimResults = false;
+        recognition.maxAlternatives = 1;
+
+        btn.addEventListener('click', e => {
+            recognition.start();
+            console.log('Listening...');
+        });
+
+        recognition.onresult = ({ results
+        }) => {
+            const pElement = document.createElement('p');
+            pElement.textContent = `You Said: ${results[0][0].transcript}`;
+            container.append(pElement);
+        }
+
+        function test() {
+            location.replace('/')
+        }
+    </script>
+</body>
+
+</html>
