@@ -1,3 +1,4 @@
-myenv
+DeployableStaticAssets
 db.sqlite3
 __pycache__
+myenv
