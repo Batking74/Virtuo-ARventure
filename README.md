@@ -14,6 +14,7 @@ In this repository, you'll find the culmination of my efforts, showcasing my ded
 - CSS
 - JavaScript
 - Python
+- Django
 - Augmented Reality
 
 Deployed Site: https://naz-first-fullstack-python-app.onrender.com
