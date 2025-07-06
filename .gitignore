@@ -1,4 +1,4 @@
-DeployableStaticAssets
-db.sqlite3
-__pycache__
-myenv
+dist
+.vscode
+node_modules
+package-lock.json
